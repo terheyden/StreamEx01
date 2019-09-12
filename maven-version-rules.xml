@@ -1,0 +1,13 @@
+<ruleset comparisonMethod="maven"
+         xmlns="http://mojo.codehaus.org/versions-maven-plugin/rule/2.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://mojo.codehaus.org/versions-maven-plugin/rule/2.0.0 http://mojo.codehaus.org/versions-maven-plugin/xsd/rule-2.0.0.xsd">
+
+    <!-- http://www.mojohaus.org/versions-maven-plugin/version-rules.html -->
+
+    <!-- ignore alphas, betas, milestones, etc. -->
+    <!-- https://stackoverflow.com/questions/10230903/maven-versions-plugin-how-to-exclude-alpha-beta-versions-from-reponse -->
+    <ignoreVersions>
+        <ignoreVersion type="regex">.*[-_\.](alpha|Alpha|ALPHA|b|beta|Beta|BETA|rc|RC|M|m|EA)[-_\.]?[0-9]*</ignoreVersion>
+    </ignoreVersions>
+</ruleset>
